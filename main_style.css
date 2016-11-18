@@ -1,63 +1,61 @@
 
 body {
     background-color: grey;
+	margin:0px;
+}
+
+.banner-div {
+	background-color:#0066cc;	
+	height: 170px;
+	width: 100%;
+	padding:0px
 }
 
 .main-header {
     color: white;
     float: left;
-    margin-right: 15px;
-}
-
-.banner-div {
-    background-color: black;
-    width: 100%;
-    height: 50px;
-    overflow: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    padding-bottom: 20px;
-    padding-left: 20px;
-  }
-
-.main-nav-bar-div {
-    padding: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    top: 0;
-    right: 0;
-    float: left;
-	padding: 0;
-	margin-top: 28px;
-
+	padding-top:0px;
+	padding-left: 50px;	
+	font-size:36px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .nav-bar-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+	float:right;
+	padding-top:40px;
+	padding-right: 120px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-.nav-li {
+li.Home {
     display: inline;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    height: 100%;
+	color:white;
+	font-size:40px;
+	margin-right:50px;
+	
 }
 
-li a {
-  color: white;
-  text-decoration: none;
-  position:
+li.Contribute {
+    display: inline;
+	color:white;
+	font-size:40px;
+	margin-right: 50px;
 }
 
-li:hover {
-    background-color: #4CAF50;
+li.Help {
+    display: inline;
+	color:white;
+	font-size:40px;
 }
+
+.nav-bar-menu{
+	color:yellow;
+}
+li:hover{
+	color:yellow;
+}
+
+
+
+
 

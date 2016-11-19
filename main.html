@@ -3,8 +3,10 @@
   <title> Gimme </title>
 
   <link rel="stylesheet" type="text/css" href="main_style.css">
+  <link rel="stylesheet" type="text/css" href="sections.css">
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="semantic/dist/semantic.min.js"></script>
 </head>
 
@@ -13,18 +15,28 @@
     	<div class="main-header">
       		<h1> Gimme </h1>
    		</div>
-        <div class="main-nav-bar-div">
-    <ul class="nav-bar-menu">
-       <li class="Home">  Home  </li>
-       <li class="Contribute">  Contribute </li>
-       <li class="Help"> Help </li>
-    </ul>
-   </div>
+      <div class="main-nav-bar-div">
+        <ul class="nav-bar-menu">
+          <li class="Home">  Home  </li>
+          <li class="Contribute">  Contribute </li>
+          <li class="Help"> Help </li>
+        </ul>
+      </div>
 	</div>
 
-  <div class="ui action input">
-    <input type="text" placeholder="Search...">
-    <button class="ui button">Search</button>
+  <div class="ui huge action input" id="api-call-input">
+      <input class="request-input" type="text" placeholder="URL...">
+      <button class="send-button"> Send </button>
   </div>
+
+  <div class="section-main">
+      <div class="section-left">
+
+      </div>
+      <div class="section-right">
+
+      </div>
+  </div>
+  <script src="requestHandler.js"></script>
 </body>
 </html>

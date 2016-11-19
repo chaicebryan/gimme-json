@@ -5,17 +5,18 @@ body {
 }
 
 .banner-div {
-	background-color:#0066cc;	
-	height: 170px;
+	background-color:#0066cc;
+	height: 120px;
 	width: 100%;
 	padding:0px
 }
 
 .main-header {
-    color: white;
-    float: left;
+  color: white;
+  float: left;
+  margin-top: 40px;
 	padding-top:0px;
-	padding-left: 50px;	
+	padding-left: 50px;
 	font-size:36px;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -28,34 +29,35 @@ body {
 }
 
 li.Home {
-    display: inline;
+  display: inline;
 	color:white;
 	font-size:40px;
 	margin-right:50px;
-	
+
 }
 
 li.Contribute {
-    display: inline;
+  display: inline;
 	color:white;
 	font-size:40px;
 	margin-right: 50px;
 }
 
 li.Help {
-    display: inline;
+  display: inline;
 	color:white;
 	font-size:40px;
 }
 
-.nav-bar-menu{
+.nav-bar-menu {
 	color:yellow;
 }
 li:hover{
 	color:yellow;
 }
 
-
-
-
-
+#api-call-input {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+}

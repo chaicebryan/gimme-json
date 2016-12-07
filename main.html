@@ -2,18 +2,19 @@
 <head>
   <title> Gimme </title>
 
-  <link rel="stylesheet" type="text/css" href="main_style.css">
-  <link rel="stylesheet" type="text/css" href="sections.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="semantic/dist/semantic.min.js"></script>
+  <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 <body>
 	<div class="banner-div">
     	<div class="main-header">
-      		<h1> Gimme </h1>
+      		<h1> Gimme { json } </h1>
    		</div>
       <div class="main-nav-bar-div">
         <ul class="nav-bar-menu">
@@ -29,14 +30,23 @@
       <button class="send-button"> Send </button>
   </div>
 
-  <div class="section-main">
-      <div class="section-left">
-
+  <div class="main-body">
+    <div class="ui segment" id="param-pane">
+      <h2 class="ui left floated header">Parameters</h2>
+      <div class="ui clearing divider"></div>
+    </div>
+    <div class="ui segment" id="editor-segment">
+      <div id="editor">
       </div>
-      <div class="section-right">
-
-      </div>
+    </div>
   </div>
+
+
+  <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/xcode");
+    editor.getSession().setMode("ace/mode/javascript");
+  </script>
   <script src="requestHandler.js"></script>
 </body>
 </html>

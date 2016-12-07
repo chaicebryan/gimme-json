@@ -31,9 +31,28 @@
   </div>
 
   <div class="main-body">
-    <div class="ui segment" id="param-pane">
-      <h2 class="ui left floated header">Parameters</h2>
-      <div class="ui clearing divider"></div>
+    <div id="param-pane">
+      <table class="ui celled striped table" id="param-table">
+        <thead>
+          <tr><th colspan="5">
+            Parameters
+          </th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="table-cell">
+              <div class="ui input cell-input-div">
+                <input  class="table-cell-input" type="text" placeholder="key">
+              </div>
+            </td>
+            <td class="table-cell">
+              <div class="ui input cell-input-div">
+                <input class="table-cell-input" type="text" placeholder="value">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="ui segment" id="editor-segment">
       <div id="editor">

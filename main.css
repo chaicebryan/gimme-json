@@ -1,7 +1,30 @@
 .body-override {
 	height: 100%;
 	margin:0px;
-	background-color: #fff;
+	background-color:#f2f2f2;
+}
+
+.text_container{
+	width:100%;
+	height:170px;
+	background-color:#0073e6;
+}
+
+.text{
+	width:100%;
+	height:100px;
+	text-align:center;
+	font-size:36px;
+	color:#FFFFFF;
+	padding-top:50px;
+}
+
+.more_text{
+	width:100%;
+	height:90px;
+	text-align:center;
+	font-size:24px;
+	color:#FFFFFF;
 }
 
 p {
@@ -15,7 +38,7 @@ th {
 
 .banner-div {
 	background-color:#0066cc;
-	height: 10%;
+	height: 120px;
 	width: 100%;
 	padding:0px;
 }
@@ -44,7 +67,7 @@ th {
 li.Home {
   display: inline;
 	color:white;
-	font-size:40px;
+	font-size:30px;
 	margin-right:50px;
 
 }
@@ -52,14 +75,14 @@ li.Home {
 li.Contribute {
   display: inline;
 	color:white;
-	font-size:40px;
+	font-size:30px;
 	margin-right: 50px;
 }
 
 li.Help {
   display: inline;
 	color:white;
-	font-size:40px;
+	font-size:30px;
 }
 
 .nav-bar-menu {

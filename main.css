@@ -1,13 +1,23 @@
-
-body {
+.body-override {
+	height: 100%;
 	margin:0px;
+	background-color: #fff;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+th {
+	height: 70%;
 }
 
 .banner-div {
 	background-color:#0066cc;
-	height: 120px;
+	height: 10%;
 	width: 100%;
-	padding:0px
+	padding:0px;
 }
 
 .main-header {
@@ -25,6 +35,10 @@ body {
 	padding-top:40px;
 	padding-right: 120px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.menu-ref {
+	color: white;
 }
 
 li.Home {
@@ -80,6 +94,12 @@ li:hover{
 #param-table {
 	width: 100%;
 	margin: 0%;
+}
+
+#table-title {
+
+	height: 80%;
+	display: inline;
 }
 
 .table-cell {

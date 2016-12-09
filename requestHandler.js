@@ -3,6 +3,15 @@ $('.send-button').click(function(){
   handleRequest(request);
 });
 
+$('#add-button').click(function(){
+  $('#param-table tbody>tr:last').clone(true).insertAfter('#param-table tbody>tr:last');
+  return false;
+});
+
+$('#reset-button').click(function(){
+  $('#param-table tr:gt(1)').remove();
+});
+
 var handleRequest = function(request){
   $.ajax({
     type: "GET",

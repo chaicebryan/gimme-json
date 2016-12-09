@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="body-override">
 	<div class="banner-div">
     	<div class="main-header">
       		<h1> Gimme { json } </h1>
@@ -19,7 +19,7 @@
       <div class="main-nav-bar-div">
         <ul class="nav-bar-menu">
           <li class="Home">  Home  </li>
-          <li class="Contribute">  Contribute </li>
+          <li class="Contribute">  <a class="menu-ref" href="https://github.com/eagleclawsan/gimme-json">Contribute</a> </li>
           <li class="Help"> Help </li>
         </ul>
       </div>
@@ -27,22 +27,24 @@
 
   <div class="ui huge action input" id="api-call-input">
       <input class="request-input" type="text" placeholder="URL...">
-      <button class="send-button"> Send </button>
+      <button class="ui primary button send-button"> Send </button>
   </div>
 
   <div class="main-body">
     <div id="param-pane">
       <table class="ui celled striped table" id="param-table">
         <thead>
-          <tr><th colspan="5">
-            Parameters
+          <tr><th colspan="3">
+            <p id="table-title"> Parameters </p>
+            <button class="ui primary button" id="add-button" style="float: right;"> + </button>
+            <button class="ui primary button" id="reset-button" style="float: right;"> clear </button>
           </th>
         </tr></thead>
         <tbody>
           <tr>
             <td class="table-cell">
               <div class="ui input cell-input-div">
-                <input  class="table-cell-input" type="text" placeholder="key">
+                <input class="table-cell-input" type="text" placeholder="key">
               </div>
             </td>
             <td class="table-cell">

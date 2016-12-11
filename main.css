@@ -111,7 +111,7 @@ li:hover{
 	width: 44%;
 	height: 70%;
 	padding: 0%;
-	border-color: white;
+	background-color: white;
 }
 
 #param-table {

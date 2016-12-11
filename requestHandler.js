@@ -17,9 +17,9 @@ var handleRequest = function(request){
     type: "GET",
     url: request,
     success: function(data) {
-      var rawJSON = $.text(JSON.stringify(data));
-      console.log(data);
+      var rawJSON = JSON.stringify(data, null, 2);
+      editor.setValue(rawJSON);
     },
-    dataType: 'jsonp'
+    dataType: 'json'
   });
 }

@@ -1,0 +1,23 @@
+{
+  "name": "gimme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "n",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eagleclawsan/gimme-json.git"
+  },
+  "author": "Chaice Bryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eagleclawsan/gimme-json/issues"
+  },
+  "homepage": "https://github.com/eagleclawsan/gimme-json#readme"
+}

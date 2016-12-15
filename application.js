@@ -6,66 +6,17 @@ var serverUrl = "127.0.0.1";
 var http = require("http");
 var path = require("path");
 var fs = require("fs");
-var checkMimeType = true;
+var express = require("express");
 
-console.log("Starting web server at " + serverUrl + ":" + port);
+var app = express();
 
-http.createServer( function(req, res) {
+console.log('Static file set to ' + __dirname + '/public');
+app.use('/assets', express.static(__dirname + '/public'));
 
-	var now = new Date();
+app.get('/', function(req, res) {
+    console.log('Reading file: ' + __dirname + '/main.html');
+		var html = fs.readFileSync(__dirname + '/main.html');
+		res.end(html);
+});
 
-	var filename = req.url || "main.html";
-	var ext = path.extname(filename);
-	var localPath = __dirname;
-	var validExtensions = {
-		".html" : "text/html",
-		".js": "application/javascript",
-		".css": "text/css",
-		".txt": "text/plain",
-		".jpg": "image/jpeg",
-		".gif": "image/gif",
-		".png": "image/png",
-		".woff": "application/font-woff",
-		".woff2": "application/font-woff2"
-	};
-
-	var validMimeType = true;
-	var mimeType = validExtensions[ext];
-	if (checkMimeType) {
-		validMimeType = validExtensions[ext] != undefined;
-	}
-
-	if (validMimeType) {
-		localPath += filename;
-		fs.exists(localPath, function(exists) {
-			if(exists) {
-				console.log("Serving file: " + localPath);
-				getFile(localPath, res, mimeType);
-			} else {
-				console.log("File not found: " + localPath);
-				res.writeHead(404);
-				res.end();
-			}
-		});
-
-	} else {
-		console.log("Invalid file extension detected: " + ext + " (" + filename + ")")
-	}
-
-}).listen(port, serverUrl);
-
-function getFile(localPath, res, mimeType) {
-	fs.readFile(localPath, function(err, contents) {
-		if(!err) {
-			res.setHeader("Content-Length", contents.length);
-			if (mimeType != undefined) {
-				res.setHeader("Content-Type", mimeType);
-			}
-			res.statusCode = 200;
-			res.end(contents);
-		} else {
-			res.writeHead(500);
-			res.end();
-		}
-	});
-}
+app.listen(3000);

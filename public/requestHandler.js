@@ -1,6 +1,10 @@
+var host = 'http://localhost:3000'
+var KEY = 'URL';
+
 $('.send-button').click(function(){
   var request = $('.request-input').val();
-  handleRequest(request);
+  var encryptedRequest = CryptoJS.AES.encrypt(request, KEY);
+  handleRequest(encryptedRequest);
 });
 
 $('#add-button').click(function(){
@@ -15,7 +19,7 @@ $('#reset-button').click(function(){
 var handleRequest = function(request){
   $.ajax({
     type: "GET",
-    url: request,
+    url: host + '/requests?call=' + request,
     success: function(data) {
       var rawJSON = JSON.stringify(data, null, 2);
       editor.setValue(rawJSON);

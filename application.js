@@ -1,21 +1,20 @@
-var port = 3000;
-var serverUrl = "127.0.0.1";
-var KEY = 'URL';
-
-var retriever = require("./retriever.js"); 
+var retriever = require("./retriever.js");
 var path = require("path");
 var fs = require("fs");
 var express = require("express");
-var CryptoJs = require("crypto-js");
 
 var app = express();
+var curFile = path.basename(__filename);
+var port = 3000;
+var serverUrl = "127.0.0.1";
+var MAIN = '/main.html';
 
-console.log('Static file set to ' + __dirname + '/public');
+// Serve static files from /public with the /assets endpoint
 app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-    console.log('Reading file: ' + __dirname + '/main.html');
-	var html = fs.readFileSync(__dirname + '/main.html');
+    console.log('Serving ' + MAIN);
+	var html = fs.readFileSync(__dirname + MAIN);
 	res.end(html);
 });
 
@@ -24,12 +23,15 @@ app.get('/requests', function(req, res) {
 	var decryptedRequest = decryptRequest(call);
 	console.log("Recieved: " + decryptedRequest);
 
-	var rawJson = retriever.makeExternalCall(decryptedRequest.toString());
-	res.send(rawJson);
+	retriever.makeExternalCall(decryptedRequest, res);
 });
 
-app.listen(3000);
+app.listen(port);
+console.log('Server started: ' + curFile);
+console.log('Listening on port ' + port)
 
 var decryptRequest = function(request) {
-	return CryptoJs.AES.decrypt(request, KEY).toString(CryptoJs.enc.Utf8);
+    // Decrypt URL
+	var encryptedRequest = new Buffer(request, 'base64');
+	return encryptedRequest.toString()
 }

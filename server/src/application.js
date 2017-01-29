@@ -7,10 +7,10 @@ var app = express();
 var curFile = path.basename(__filename);
 var port = 3000;
 var serverUrl = "127.0.0.1";
-var MAIN = '/main.html';
+var MAIN = '/../../index.html';
 
 // Serve static files from /public with the /assets endpoint
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/../../public'));
 
 app.get('/', function(req, res) {
     console.log('Serving ' + MAIN);

@@ -93,6 +93,10 @@ li:hover{
 	color:yellow;
 }
 
+li a:hover{
+	color:yellow;
+}
+
 #api-call-input {
   width: 60%;
   margin-left: 20%;

@@ -4,18 +4,23 @@
 
   <link rel="stylesheet" type="text/css" href="assets/index.css">
   <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type"text/css" href="assets\WOW\css\libs\animate.css">
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
   <script src="assets/semantic/dist/semantic.min.js"></script>
   <script src="assets/src/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="assets\WOW\dist\wow.min.js"></script>
+  <script>new WOW().init();</script>
 
 </head>
 
 <body class="body-override">
 	<div class="banner-div">
     	<div class="main-header">
+        <section class="wow tada">
       		<h1> Gimme { json } </h1>
+            </section>
    		</div>
       <div class="main-nav-bar-div">
         <ul class="nav-bar-menu">
@@ -27,10 +32,14 @@
 	</div>
 <div class="text_container">
 	<div class="text">
+    <section class="wow fadeInDown" data-wow-delay="1s">
     	Welcome
+        </section>
     </div>
     <div class="more_text">
+    <section class="wow fadeInDown" data-wow-delay="2s">
     	Please enter your API endpoint below!
+        </section>
     </div>
 </div>
   <div class="ui huge action input" id="api-call-input">

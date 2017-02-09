@@ -1,4 +1,4 @@
-var host = 'http://localhost:3000';
+var host = 'http://138.68.133.227:3000';
 var requestsEndpoint = '/requests';
 var paramStart = '?';
 var callParam = 'call=';

@@ -6,11 +6,13 @@ var express = require("express");
 var app = express();
 var curFile = path.basename(__filename);
 var port = 3000;
-var serverUrl = "127.0.0.1";
 var MAIN = '/../../index.html';
 
-// Serve static files from /public with the /assets endpoint
-app.use('/assets', express.static(__dirname + '/../../public'));
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.get('/', function(req, res) {
     console.log('Serving ' + MAIN);
